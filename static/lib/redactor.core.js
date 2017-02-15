@@ -144,7 +144,6 @@ define('redactor', [
 
     require(['translator'], function (translator) {
         translator.getTranslations(config.userLang, 'redactor', function (langData) {
-            console.log(langData);
             $.Redactor.opts.langs[config.userLang] = langData;
             if (langData.html != undefined) {
                 $.Redactor.opts.lang = config.userLang;
